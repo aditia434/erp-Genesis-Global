@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #e6f0ff;
+}
+
+.nav {
+  background: #004080;
+  padding: 12px;
+  color: white;
+}
+
+.nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.nav .kanan {
+  float: right;
+}
+
+.container {
+  padding: 30px;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+.err {
+  background: #ffe6e6;
+  color: #b30000;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}

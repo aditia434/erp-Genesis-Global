@@ -1,0 +1,18 @@
+# ---------- Base image ----------
+FROM php:8.2-cli
+
+# (Opsional) install ekstensi tambahan—curl sudah aktif di image ini
+# RUN docker-php-ext-install pdo pdo_mysql
+
+# ---------- Workdir ----------
+WORKDIR /app
+
+# ---------- Copy project ----------
+COPY . .
+
+# ---------- Jalankan PHP built‑in web server ----------
+# Railway otomatis memberi variabel $PORT; kalau belum ada, pakai 3000.
+CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-3000} -t ."]
+
+# (Opsional) deklarasikan port standar untuk local testing
+EXPOSE 3000
