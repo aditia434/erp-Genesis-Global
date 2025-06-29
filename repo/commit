@@ -1,17 +1,14 @@
 # ---------- Base image ----------
 FROM php:8.2-cli
 
-# (Opsional) install ekstensi tambahan
-# RUN docker-php-ext-install pdo pdo_mysql
-
-# ---------- Workdir ----------
+# ---------- Working directory ----------
 WORKDIR /app
 
 # ---------- Copy project ----------
 COPY . .
 
-# ---------- Jalankan PHP built‑in web server ----------
-CMD ["sh", "-c", "php -S 0.0.0.0:80 -t ."]
+# ---------- Jalankan PHP web server langsung di port 80 ----------
+CMD ["php", "-S", "0.0.0.0:80", "-t", "."]
 
-# WAJIB! Agar Railway bisa expose web port
+# ---------- Port publik yang dibuka ke luar ----------
 EXPOSE 80
